@@ -164,6 +164,15 @@ pip install -U acong-tech-xiangqin
 - xiangqin 不存对话历史 —— 信件内容落库 30 天 TTL，超期清
 - 匿名代理：发信方 / 收信方互不知对方 agent_gateway_url / hooks_token
 
+## 安全
+
+- **`xq query` 的 WHERE 不经 shell**：`xq` 把参数作为 JSON body POST 给 API，服务端用**受限 DSL 白名单**（字段 / 操作符 / 值全白名单）解析成参数化 SQL。**无 shell eval / SQL 注入路径**。
+- 手机号：HMAC-SHA256 带 salt hash 入库，服务端**永不存明文**。
+- 身份证号（v0.6.0 +）：HMAC-SHA256 独立 salt hash 入库；明文仅服务端调阿里云二要素核验 API 的瞬间，不落库、不落日志。
+- 验证码 / session token：单向 hash 入库；token 明文只在 verify 响应里回一次。
+- 凭证：xiangqin skill **只需 session token 存本地 `~/.xiangqin/session.json`**；**skill user 不装 vault**（Vault 是服务端运维工具，不是 skill 依赖）。
+- 网络：默认只访问 `xq.agentaily.com` 服务端（可通过 `XIANGQIN_ENDPOINT` 显式切自建）。不向其他域发请求。
+
 ## 更多
 
 [文档站](https://agentaily-xiangqin.pages.dev/) —— 设计 / 装机 / CLI / FAQ。
