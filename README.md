@@ -10,6 +10,16 @@
 
 详见 [SKILL.md](./SKILL.md) 里的 TRIGGER 列表和典型流程。
 
+### 锁定某个版本（skills.sh 用户）
+
+`npx skills add` 默认拿 **main HEAD**，不会跟 git tag 走。想锁定某个版本，在仓名后加 `#vX.Y.Z` fragment：
+
+```bash
+npx skills add acong-tech-skills/xiangqin#v0.6.3
+```
+
+不带 fragment = 跟 main 滚动（main 始终等于最新稳定 release）。
+
 ## 源文件在哪
 
 本仓的 `SKILL.md` 和 `README.md` 是**主仓 CI 自动同步过来的镜像**，源文件维护在 xiangqin 主仓（`SKILL.md` 和 `SKILL-REPO-README.md`）。直接改本仓会在下次 release 时被覆盖。

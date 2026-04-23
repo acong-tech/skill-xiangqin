@@ -1,6 +1,6 @@
 ---
 name: xiangqin
-description: 相亲平台（虚拟信封私信 + 受众查询）的使用入口。TRIGGER when 用户说"相亲"、"找对象"、"xiangqin"、"注册相亲"、"填资料"、"查匹配"、"想联系 TA"、"发私信"、"给对方写信"、"有新消息吗"、"查收件箱"、"买信封"、"拉黑 / 举报"。DO NOT TRIGGER when 用户要聊天/推荐/匹配算法（本项目不做）、服务端不可达时先 curl health。
+description: 相亲平台（虚拟信封私信 + 受众查询）的使用入口。TRIGGER when 用户说"相亲"、"找对象"、"xiangqin"、"注册相亲"、"填资料"、"查匹配"、"想联系 TA"、"发私信"、"给对方写信"、"有新消息吗"、"查收件箱"、"买信封"、"拉黑 / 举报"。DO NOT TRIGGER when 用户要聊天/推荐/匹配算法（本项目不做）、服务端不可达时先 curl health。 xiangqin — a Chinese matchmaking / dating skill for Claude agents.
 ---
 
 # xiangqin — 相亲平台 skill
