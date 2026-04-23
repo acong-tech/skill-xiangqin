@@ -179,3 +179,13 @@ pip install -U acong-tech-xiangqin
 ## 更多
 
 [文档站](https://agentaily-xiangqin.pages.dev/) —— 设计 / 装机 / CLI / FAQ。
+
+## 合规
+
+xiangqin 由**杭州阿空智能科技有限公司**（浙ICP备2026022274号-1）运营。使用本 skill 和 `xq` CLI 受以下条款约束：
+
+- [用户协议](https://agentaily-xiangqin.pages.dev/legal/terms/)
+- [隐私政策](https://agentaily-xiangqin.pages.dev/legal/privacy/)
+- [数据生命周期](https://agentaily-xiangqin.pages.dev/legal/data-lifecycle/)
+
+`xq register` 首次运行会交互显示以上链接并要求确认同意。仅面向 18 周岁以上成年用户。
